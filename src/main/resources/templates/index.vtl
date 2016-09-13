@@ -1,0 +1,25 @@
+<h1>Test</h1>
+
+#if ($placeses)
+<ul>
+  #foreach ($places in $placeses)
+    <li>$places.getCountry()</li>
+  #end
+</ul>
+#else
+  <p>You should travel more!</p>
+#end
+
+
+<form action="/placeses" method="post">
+  <label for="country">Country</label>
+  <input id="country" name= "country" type="text">
+  <label for="city">City</label>
+  <input id="city" name= "city" type="text">
+  <label for="year">Year visited</label>
+  <input id="year" name= "year" type="text">
+  <label for="purpose">Purpose of your visit</label>
+  <input id="purpose" name= "purpose" type="text">
+
+  <button type="submit" class="btn">Enter</button>
+</form>
